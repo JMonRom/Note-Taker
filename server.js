@@ -18,9 +18,7 @@ function Note (title, text) {
 // connected to notes html once button is clicked user redirected
 app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, './public/notes.html')))
 
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, './public/index.html')))
-
-app.get('api/notes', (req, res) => {
+app.get('/api/notes', (req, res) => {
   fs.readFile('./db/db.json', 'utf8', (err, data) => {
     if (err) throw err;
     data  = JSON.parse(data);
@@ -30,6 +28,7 @@ app.get('api/notes', (req, res) => {
   
 }) 
 
+// controls the data that is saved on body and returns new note to add to list
 app.post('/api/notes', (req, res) => {
   const newNote = req.body;
 
@@ -43,6 +42,8 @@ app.post('/api/notes', (req, res) => {
     err ? console.error(err) : console.log('success')
   })
 });
+
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, './public/index.html')))
 
 app.listen(PORT, () => {
   console.log(`App listening ${PORT}`);
