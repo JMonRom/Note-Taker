@@ -25,6 +25,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
+// appends note and increases count of created notes displayed on page
 function makeNewNote(body, notesArray) {
   const newNote = body;
   if (!Array.isArray(notesArray))
