@@ -44,3 +44,7 @@
   https://github.com/JMonRom
 
   jmontes8686@gmail.com
+
+---
+permalink: ./public/index.html
+---
