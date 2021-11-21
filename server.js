@@ -15,14 +15,14 @@ app.get('/api/notes', (req, res) => {
   res.json(notesTaken.slice(1));
 }); 
 // connected to notes html once button is clicked user redirected
-app.get('/notes', (req, res) => { res.sendFile(path.join(__dirname, './public/notes.html'))
+app.get('/notes', (req, res) => { res.sendFile(path.join(__dirname, './notes.html'))
 });
 
-app.get('*', (req, res) => {res.sendFile(path.join(__dirname, './public/index.html'))
+app.get('*', (req, res) => {res.sendFile(path.join(__dirname, './index.html'))
 })
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './public/index.html'));
+  res.sendFile(path.join(__dirname, './index.html'));
 });
 
 // appends note and increases count of created notes displayed on page
