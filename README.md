@@ -45,6 +45,3 @@
 
   jmontes8686@gmail.com
 
----
-permalink: /index.html
----
