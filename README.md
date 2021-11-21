@@ -22,6 +22,10 @@
 
   [Note-Taker](https://github.com/JMonRom/Note-Taker)
 
+  Here is a screenshot of the site:
+
+  [PNG of Note Taker](./images/note_taker.png)
+
   ## Table of Contents
   * [License](#license)
   * [Contributing](#contributing)
